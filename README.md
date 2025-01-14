@@ -5,7 +5,7 @@
 
 ## Project Overview
 This project is a **Face Recognition and Liveliness Detector** application. It combines:
-- **Silent-Face-Recognition** Python library for face recognition.
+- **Face-Recognition** Python library for face recognition.
 - **Spoof and Anti-Spoof Models** for detecting liveliness and preventing spoofing attempts.
 
 The system is designed to ensure secure face authentication by validating both the identity and the liveliness of the individual.
@@ -13,7 +13,7 @@ The system is designed to ensure secure face authentication by validating both t
 ---
 
 ## Features
-- **Face Recognition**: Accurate face matching using the Silent-Face-Recognition library.
+- **Face Recognition**: Accurate face matching using the Face-Recognition library.
 - **Liveliness Detection**: Detects whether the face is real or a spoof using anti-spoofing models.
 - **Secure Authentication**: Combines recognition and liveliness detection for enhanced security.
 
@@ -49,7 +49,7 @@ Ensure you have the following installed:
 
 
 4. **Add Pretrained Models**:
-   - Download the Silent-Face-Recognition model.
+   - Download the Face-Recognition model.
    - Download the Spoof and Anti-Spoof models.
    - Place them in the designated `models/` folder.
 
@@ -63,7 +63,7 @@ Ensure you have the following installed:
    ```
 
 2. **Face Recognition**:
-   - The system will capture a face and match it using the Silent-Face-Recognition library.
+   - The system will capture a face and match it using the Face-Recognition library.
 
 3. **Liveliness Detection**:
    - The anti-spoofing model will validate whether the face is real or a spoof.
@@ -90,7 +90,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ---
 
 ## Acknowledgments
-Special thanks to the developers of the Silent-Face-Recognition library and the authors of the anti-spoofing models.
+Special thanks to the developers of the Face-Recognition library and the authors of the anti-spoofing models.
 
 ---
 
