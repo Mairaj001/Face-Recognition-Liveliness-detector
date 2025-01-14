@@ -71,8 +71,8 @@ Ensure you have the following installed:
 
 
 ## Models
-### Silent Face Recognition
-The Silent-Face-Recognition library provides a high-accuracy model for face recognition.
+### Face Recognition
+The Face_Recognition library provides a high-accuracy model for face recognition.
 
 ### Spoof and Anti-Spoof Model
 This model is used to determine whether the detected face is live or a spoof attempt (e.g., photo or video).
