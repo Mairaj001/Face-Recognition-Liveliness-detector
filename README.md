@@ -23,11 +23,11 @@ The system is designed to ensure secure face authentication by validating both t
 Ensure you have the following installed:
 - Python 3.8 or above
 - Libraries:
-  - silent-face-recognition
+  - face_recognition
   - numpy
   - tensorflow
   - opencv-python
-  - flask (if using a web interface)
+  
 
 ---
 
@@ -35,7 +35,7 @@ Ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/face-recognition-liveliness.git
+   git clone https://github.com/Mairaj001/Face-Recognition-Liveliness-detector.git
    cd face-recognition-liveliness
    ```
 
@@ -46,10 +46,7 @@ Ensure you have the following installed:
    source venv/bin/activate   # On macOS/Linux
    ```
 
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+
 
 4. **Add Pretrained Models**:
    - Download the Silent-Face-Recognition model.
@@ -73,16 +70,6 @@ Ensure you have the following installed:
 
 ---
 
-## File Structure
-```
-FaceRecognition/
-├── app.py                # Main application file
-├── models/              # Directory for pre-trained models
-├── static/              # Static assets (CSS, JS, images)
-├── templates/           # HTML templates (if applicable)
-├── requirements.txt    # List of dependencies
-└── README.md            # Project documentation
-```
 
 ---
 
@@ -111,5 +98,5 @@ Special thanks to the developers of the Silent-Face-Recognition library and the 
 ---
 
 ## Contact
-For queries or feedback, reach out to **Mairaj Ahmed Khoso** at mairaj@example.com.
+For queries or feedback, reach out to **Mairaj Ahmed Khoso** at mairajahmed2k21@gmail.com.
 
