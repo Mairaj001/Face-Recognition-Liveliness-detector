@@ -1,0 +1,64 @@
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PySide6.QtUiTools import QUiLoader
+from frontend.database_helper import register_user, get_user_by_name
+import cv2
+import os
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        loader = QUiLoader()
+        self.ui = loader.load("frontend/ui_main_window.ui", self)
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.ui.captureButton.clicked.connect(self.capture_image)
+        self.ui.registerButton.clicked.connect(self.register_user)
+        self.ui.loginButton.clicked.connect(self.login_user)
+
+    def capture_image(self):
+        cap = cv2.VideoCapture(0)
+        if not cap.isOpened():
+            QMessageBox.critical(self, "Error", "Cannot open webcam")
+            return
+
+        ret, frame = cap.read()
+        if not ret:
+            QMessageBox.critical(self, "Error", "Failed to capture image")
+            return
+
+        name = self.ui.nameInput.text()
+        if not name:
+            QMessageBox.warning(self, "Warning", "Please enter a name first")
+            return
+
+        img_path = f"images/{name}.png"
+        cv2.imwrite(img_path, frame)
+        QMessageBox.information(self, "Success", "Image captured successfully")
+        cap.release()
+        cv2.destroyAllWindows()
+
+    def register_user(self):
+        name = self.ui.nameInput.text()
+        email = self.ui.emailInput.text()
+        img_path = f"images/{name}.png"
+
+        if not os.path.exists(img_path):
+            QMessageBox.warning(self, "Warning", "Please capture an image first")
+            return
+
+        try:
+            register_user(name, email, img_path)
+            QMessageBox.information(self, "Success", "User registered successfully")
+        except ValueError as e:
+            QMessageBox.critical(self, "Error", str(e))
+
+    def login_user(self):
+        # Implement login using face recognition and anti-spoofing logic
+        pass
+
+if __name__ == "__main__":
+    app = QApplication([])
+    window = MainWindow()
+    window.show()
+    app.exec()
