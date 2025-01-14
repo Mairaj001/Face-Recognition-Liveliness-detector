@@ -68,10 +68,7 @@ Ensure you have the following installed:
 3. **Liveliness Detection**:
    - The anti-spoofing model will validate whether the face is real or a spoof.
 
----
 
-
----
 
 ## Models
 ### Silent Face Recognition
