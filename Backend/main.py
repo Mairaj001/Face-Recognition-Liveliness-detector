@@ -2,6 +2,11 @@ import os
 import sys
 import cv2
 
+
+root_dir = os.getcwd()
+print(root_dir)
+
+
 face_recog_venv_path = os.path.join(os.getcwd(), "FaceRecognition", "venv", "Lib", "site-packages")
 if os.path.exists(face_recog_venv_path):
     sys.path.append(face_recog_venv_path)
