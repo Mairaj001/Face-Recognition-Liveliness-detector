@@ -7,14 +7,14 @@ class AntiSpoofingMain:
     def __init__(self):
         # Load Face Detection Model
         root_dir = os.getcwd()
-        face_cascade_path = os.path.join(root_dir, "AntiSpoofing/Models/CascadeModel/haarcascade_frontalface_default.xml")
+        face_cascade_path = os.path.join(root_dir, "Backend/AntiSpoofing/Models/CascadeModel/haarcascade_frontalface_default.xml")
         if not os.path.exists(face_cascade_path):
             raise FileNotFoundError(f"Face cascade file not found at {face_cascade_path}.")
 
         self.face_cascade = cv2.CascadeClassifier(face_cascade_path)
 
         # Load Anti-Spoofing Model
-        model_path = os.path.join(root_dir, 'AntiSpoofing/Models/AntiSpoofIngModel/antispoofing_model.h5')
+        model_path = os.path.join(root_dir, 'Backend/AntiSpoofing/Models/AntiSpoofIngModel/antispoofing_model.h5')
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"Anti-spoofing model file not found at {model_path}.")
 

@@ -7,7 +7,7 @@ root_dir = os.getcwd()
 print(root_dir)
 
 
-face_recog_venv_path = os.path.join(os.getcwd(), "FaceRecognition", "venv", "Lib", "site-packages")
+face_recog_venv_path = os.path.join(os.getcwd(), "Backend/FaceRecognition", "venv", "Lib", "site-packages")
 if os.path.exists(face_recog_venv_path):
     sys.path.append(face_recog_venv_path)
 else:
@@ -15,7 +15,7 @@ else:
     sys.exit(1)
 
 
-anti_spoof_venv_path = os.path.join(os.getcwd(), "AntiSpoofing", "venv_py3.11", "Lib", "site-packages")
+anti_spoof_venv_path = os.path.join(os.getcwd(), "Backend/AntiSpoofing", "venv_py3.11", "Lib", "site-packages")
 if os.path.exists(anti_spoof_venv_path):
     sys.path.append(anti_spoof_venv_path)
 else:
