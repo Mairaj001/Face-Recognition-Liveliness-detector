@@ -36,7 +36,7 @@ Ensure you have the following installed:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Mairaj001/Face-Recognition-Liveliness-detector.git
-   cd face-recognition-liveliness
+   
    ```
 
 2. **Set Up Virtual Environment**:
