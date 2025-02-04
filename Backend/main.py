@@ -15,7 +15,7 @@ else:
     sys.exit(1)
 
 
-anti_spoof_venv_path = os.path.join(os.getcwd(), "Backend/AntiSpoofing", "venv_py3.11", "Lib", "site-packages")
+anti_spoof_venv_path = os.path.join(os.getcwd(), "Backend/AntiSpoofing", "venv", "Lib", "site-packages")
 if os.path.exists(anti_spoof_venv_path):
     sys.path.append(anti_spoof_venv_path)
 else:
