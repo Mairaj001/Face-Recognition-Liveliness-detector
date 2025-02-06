@@ -90,7 +90,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ---
 
 ## Acknowledgments
-Special thanks to the developers of the Face-Recognition library you may see the Github link which is https://github.com/minivision-ai/Silent-Face-Anti-Spoofing.
+Special thanks to the developers of the Face-Recognition library you may see the Github link which is https://github.com/ageitgey/face_recognition.
 
 ---
 
